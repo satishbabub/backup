@@ -1,0 +1,34 @@
+package play
+
+result[message]{
+  input.scanResults.cvss >= input.policy.maxCVSSScore
+  message := "CVSS greater than allowed value"
+}
+
+result[message]{
+  input.scanResults.cvss >= input.policy.maxCVSSScore
+  message := "CVSS greater than allowed value - II"
+}
+
+result[message]{
+  input.version =2
+  input.scanResults.cvss < input.policy.maxCVSSScore
+  message := "Policy evaluation status PASSED"
+}
+
+status = "PASS"{
+result[message] == "Policy evaluation status PASSED"
+}
+
+status = "FAIL"{
+result[message] == "CVSS greater than allowed value"
+}
+
+status = "FAIL"{
+result[message] == "CVSS greater than allowed value - II"
+}
+
+version = "v2"{
+some i
+	result[i] == "CVSS greater than allowed value - II"
+    }

@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: test
+    url: r2dbc:postgresql:mem:test-transaction-react #///reactpoc?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.postgresql.Driver
+    password: test
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'true'
+

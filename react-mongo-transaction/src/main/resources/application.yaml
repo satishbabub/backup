@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      #host: localhost #mongodb://WK-L-HQ3P733:27000,WK-L-HQ3P733:27001,WK-L-HQ3P733:27002?replicaSet=rs #localhost
+      #port: 27017
+      database: user-detail
+      uri: mongodb://WK-L-HQ3P733:27000

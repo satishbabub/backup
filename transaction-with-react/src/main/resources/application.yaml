@@ -1,0 +1,18 @@
+spring:
+  #autoconfigure:
+    #exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  r2dbc:
+    username: postgres
+    #initialization-mode: always
+    url: r2dbc:postgresql://localhost/test-transaction-react
+    driverClassName: org.postgresql.Driver
+    password: test
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: 'true'
+    properties:
+      hibernate:
+        #ddl-auto: create
+        format_sql: 'true'
+        #default_schema: test
+    show-sql: 'true'

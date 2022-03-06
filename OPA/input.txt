@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "scanResults":{
+        "cve": "CVE-2021-234543",
+        "cvss": 7.3
+    },
+    "policy":{
+        "maxCVSSScore": 4
+    }
+}
